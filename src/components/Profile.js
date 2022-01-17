@@ -1,17 +1,21 @@
 import React from 'react'; //optional
 
-  function Profile(){
-    return (
-      <aside>
-        <div class="profile">
-          <img class="profile__image" alt="" src="./profile-hex.png" />
-        </div>
-        <br />
-        <div class="profile__name">
-          <h2><span class="profile--bold">Amy</span> Mansell</h2>
-        </div>
-      </aside>
-    );
-  }
+function Profile() {
+  const firstName = "Amy"
+  const lastName = "Mansell"
+  const avatar = "/profile-hex.png"
 
-  export default Profile;
+  return (
+    <aside>
+      <div className="profile">
+        <img className="profile__image" alt="avatar" src={avatar} />
+      </div>
+      <br />
+      <div className="profile__name">
+        <h2><span className="profile--bold">{firstName}</span> {lastName}</h2>
+      </div>
+    </aside>
+  )
+}
+
+export default Profile;
